@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,200&family=Roboto:wght@100;300;400;500;900&display=swap');
+
+:root{
+    --red:#ff3838;
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: #f38;
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+section{
+    padding: 2rem 9%;
+
+}
+body{
+    background: #f7f7f7;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 6%;
+    background: #00000038;
+    box-shadow: 0 .5rem 1rem rgba(111, 0, 255, 0.1);
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #666;
+}
+header .logo i{
+    padding-right: .5rem;
+    color: #f38;
+}
+header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    color: #ff3838;
+    background-color: 
+    
+}
+header .navbar a:hover{
+    color: rgb(111, 0, 255);
+}
+#menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: 1.5rem;
+    display: none;
+}
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    min-height:100vh;
+    align-items: center;
+}
+.home .content{
+    flex:1 1 40rem;
+    padding-top: 6.5rem;
+
+}
+.home .image{
+    flex:1 1 40rem;
+}
+.home .image img{
+    width: 85%;
+    padding: 1rem;
+    animation: float 3s linear infinite;
+
+
+}
+@keyframes float{
+    0%,100%{
+        transform: translateY(0rem);
+
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+    
+}
+
+
+.home .content h3{
+    font-size: 5rem;
+    color: #333;
+
+}
+.home .content p{
+    font-size: 1.3rem;
+    color:#666;
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* media qureies */
+@media(max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+    #menu-bar{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0, 0, 0, .1);
+        border-left: .5rem solid #f38;
+        background: #fff;
+    }
+}
+
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: rgb(2, 2, 2);
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* HEADER
+------------------------------- */
+.logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: rgb(0, 0, 0);
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.aaa {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem 3%;
+    margin-left: rem;
+    position: relative;
+    top: 700px;
+    left: 10vh;
+    right: 0;
+    justify-content: space-between;
+}
+    
+
+
+
+/* BANNER
+------------------------------- */
+.banner{
+    width: 100%;
+}
+/* content
+------------------------------- */
+article{
+    width: 70%;
+}
+aside{
+    width: 22%;
+}
+.new-contents{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+/* article
+------------------------------- */
+.post-info{
+    position: relative;
+    padding-top:4px;
+    margin-bottom: 40px;
+}
+.post-date{
+    background: #0bd;
+    border-radius: 50%;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+}
+.post-date span{
+    font-size: 1rem;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin:0 auto;
+}
+.post-title{
+    font-size: 2rem;
+    font-weight: normal;
+}
+.post-title, .post-cat{
+    margin-left: 120px;
+}
+article img{
+    
+    margin-bottom: 20px;
+}
+/* aside
+------------------------------- */
+.sub-title{
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+aside p{
+    padding: 12px 10px;
+}
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+}
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+}
+.sub-menu a{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: block;
+}
+.sub-menu a:hover{
+    color: #0bd;
+}
+/* footer
+------------------------------- */
+footer{
+    background: #432;
+    text-align: center;
+    padding: 26px 0;
+}
+footer p{
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+
+
+
+/* media queries
+------------------------------- */
+@media (max-width:600px) {
+  
+    .page-header{
+        flex-direction: column;
+    }
+   .main-nav{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    flex-direction: column;
+    
+    
+   }
+   .main-nav li{
+    margin: 0 20px;
+    
+   }
+   .new-contents{
+    flex-direction: column;
+   }
+   article, aside{
+    width: 100%;
+    
+   }
+   aside{
+    margin-top: 40px;
+   }
+   .post-info h2{
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
+   }
+   .post-date{
+    width: 80px;
+    height: 80px;
+    font-size: 1.1rem;
+    background: rgb(0, 0, 0);
+   }
+}
+#slider-container {
+    height: 400px; /* 設定容器高度，根據需求調整 */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slider-image:not(:first-child) {
+    transform: translateY(100%);
+  }
+  .background {
+    width: 100%;
+    height: 100vh; /* 設定背景高度，根據需求調整 */
+    background-image: url('img/33.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
