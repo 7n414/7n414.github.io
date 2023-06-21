@@ -163,3 +163,12 @@ window.addEventListener('scroll', function() {
 
 
 
+document.getElementById('menu-bar').addEventListener('click', function () {
+  var navbar = document.querySelector('header .navbar');
+  if (navbar.style.display === 'none') {
+    navbar.style.display = 'block';
+  } else {
+    navbar.style.display = 'none';
+  }
+});
+

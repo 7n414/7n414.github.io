@@ -10,7 +10,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .2s linear;
+
 }
 
 *::selection {
@@ -140,34 +140,37 @@ header .navbar a:hover {
     }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
     #menu-bar {
-        display: initial;
+      display: initial;
+      z-index: +90000;
     }
-
     header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #f7f7f7;
-        border-top: .1rem solid rgba(0, 0, 0, .1);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    header .navbar a {
+        scale: 1;
         margin: 1.5rem;
+        position: relative;
+        top: 26.5vh;
+        right: -13vh;
         padding: 1.5rem;
-        display: block;
+        display: none;
         border: .2rem solid rgba(0, 0, 0, .1);
-        border-left: .5rem solid #f38;
-        background: #fff;
+        border-left: .5rem solid rgba(255, 51, 136, 0);
+        background: #ffffff00;
     }
-}
-
+    header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      display: block; /* 點擊後顯示 nav bar */
+    }
+    header .navbar a {
+      margin: 1.5rem;
+      padding: 1.5rem;
+      display: block;
+      border: .2rem solid rgba(0, 0, 0, .1);
+      border-left: .5rem solid #f38;
+      background: #fff;
+    }
+  }
+  
 
 /* 共通部分
 ------------------------------- */
@@ -241,6 +244,26 @@ img {
 }
 
 .aaaaa {
+    height: 10vh;
+    width: 10vh;
+    margin: 0px 10vh 0px 10vh;
+    opacity: 0.9;
+
+
+
+
+}
+.aaaaaa {
+    height: 10vh;
+    width: 10vh;
+    margin: 0px 10vh 0px 10vh;
+    opacity: 0.9;
+
+
+
+
+}
+.aaaaaaa {
     height: 10vh;
     width: 10vh;
     margin: 0px 10vh 0px 10vh;
@@ -704,4 +727,87 @@ footer p {
         display: inline-block;
         
     }
+}
+@media (max-width: 800px) {
+
+    #z,
+    #x,
+    #v,
+    #n,
+    #m {
+        position: absolute;
+        top: 50vh;
+        left: 50vh;
+        display: inline-block;
+        
+    }
+   
+    #n {
+        position: absolute;
+        top: 50vh;
+        left: 0vh;
+        display: inline-block;
+        
+    }
+    #v {
+        position: absolute;
+        top: 50vh;
+        left:-50vh;
+        display: inline-block;
+        
+    }
+    #x {
+        position: absolute;
+        top: 50vh;
+        left: -100vh;
+        display: inline-block;
+        
+    }
+    #z {
+        position: absolute;
+        top: 50vh;
+        left: -150vh;
+        display: inline-block;
+        
+    }
+    .aaaaa {
+        position: absolute;
+        left: 0vh;
+       
+        height: 10vh;
+        width: 10vh;
+        margin: 0px 10vh 0px 10vh;
+        opacity: 0.9;
+    
+    
+    
+    
+    }
+    .aaaaaa {
+        position: absolute;
+        left: 15vh;
+        height: 10vh;
+        width: 10vh;
+        margin: 0px 10vh 0px 10vh;
+        opacity: 0.9;
+    
+    
+    
+    
+    }
+    
+    .aaaaaaa {
+        position: absolute;
+        left: 30vh;
+        height: 10vh;
+        width: 10vh;
+        margin: 0px 10vh 0px 10vh;
+        opacity: 0.9;
+    
+    
+    
+    
+    }
+    
+    
 }
