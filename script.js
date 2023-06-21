@@ -172,3 +172,52 @@ document.getElementById('menu-bar').addEventListener('click', function () {
   }
 });
 
+var speed = 100; // 設定初始速度值
+
+function handleScroll(event) {
+  if (!scrolling) {
+    scrolling = true;
+
+    var delta = event.deltaY || event.detail || (-1 * event.wheelDelta);
+    var speedModifier = 0.5; // 將速度減少50%
+
+    if (delta < 0) {
+      // 上滑
+      smoothScroll(-speed * speedModifier);
+    } else {
+      // 下滑
+      smoothScroll(speed * speedModifier);
+    }
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function () {
+      scrolling = false;
+    }, 100); // 調整延遲時間
+  }
+
+  event.preventDefault();
+}
+
+function smoothScroll(distance) {
+  var startY = window.pageYOffset;
+  var currentTime = 0;
+  var duration = 1000; // 持續時間，單位：毫秒
+
+  var easeOutQuad = function (t) {
+    return t * (2 - t);
+  };
+
+  var animateScroll = function () {
+    currentTime += 10;
+    var easeValue = easeOutQuad(currentTime / duration);
+    var scrollY = Math.round(startY + (distance * easeValue));
+
+    window.scrollTo(0, scrollY);
+
+    if (currentTime < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  animateScroll();
+}
