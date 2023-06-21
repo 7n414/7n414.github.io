@@ -2,7 +2,7 @@
 
 
 * {
-    
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -65,7 +65,7 @@ header .navbar a:hover {
     border-radius: .3rem;
     padding: 1.5rem;
     display: none;
-    
+
 }
 
 .home {
@@ -260,6 +260,7 @@ img {
     transform: scale(1.2);
     filter: brightness(0.8);
 }
+
 #w img {
     transition: transform 0.3s, filter 0.3s;
 }
@@ -267,8 +268,9 @@ img {
 #w img:hover {
     transform: scale(1.2);
     filter: brightness(0.8);
-    
+
 }
+
 #e img {
     transition: transform 0.3s, filter 0.3s;
 }
@@ -295,7 +297,7 @@ img {
 
 #w {
     height: 100vh;
-    width: 100vh;
+    width: 43vh;
     margin: 30vh -20vh 0px;
     opacity: 1;
     display: inline-block;
@@ -310,58 +312,63 @@ img {
 
 #o4 {
 
-  
-  
+
+
     display: inline-block;
-   
+
     position: absolute;
     top: 28vh;
     left: 802vh;
     right: 0;
 
 }
+
 #e {
     height: 100vh;
-    width: 100vh;
+    width: 43vh;
     margin: 30vh -20vh 0px;
     opacity: 1;
     display: inline-block;
-   
+
     position: absolute;
     top: 0vh;
     left: 122vh;
     right: 0;
 
 }
+
 #z {
-   
+
     margin: 0vh 1vh 0px;
     display: inline-block;
 
 }
 
 #x {
-   
+
     margin: 0vh 1vh 0px;
     display: inline-block;
 
 }
+
 #v {
-   
+
     margin: 0vh 1vh 0px;
     display: inline-block;
 
 }
+
 #n {
-   
+
     margin: 0vh 1vh 0px;
-    
+
     display: inline-block;
 }
+
 #m {
-   
+
     margin: 0vh 1vh 0px;
-    display: inline-block; 
+    display: inline-block;
 
 }
 
@@ -374,10 +381,12 @@ img {
 
 
 
-.s3{ position: absolute;
-    top:0vh;
+.s3 {
+    position: absolute;
+    top: 0vh;
     left: 100vh;
-    right: 0;}
+    right: 0;
+}
 
 #b {
     opacity: 0;
@@ -386,6 +395,7 @@ img {
     top: 0;
     left: 42vh;
     right: 0;
+
 }
 
 
@@ -637,3 +647,61 @@ footer p {
     background-repeat: no-repeat;
 }
 
+#q img,
+#w img,
+#e img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1800px) {
+
+    /* 視窗寬度小於等於 600px 時的位置調整 */
+    #b {
+        left: -200vh;
+    }
+}
+
+@media (max-width: 1800px) {
+
+    #z,
+    #x,
+    #v,
+    #n,
+    #m {
+        position: absolute;
+        top: 100vh;
+        left: 50vh;
+        display: inline-block;
+        
+    }
+   
+    #n {
+        position: absolute;
+        top: 100vh;
+        left: 0vh;
+        display: inline-block;
+        
+    }
+    #v {
+        position: absolute;
+        top: 100vh;
+        left:-50vh;
+        display: inline-block;
+        
+    }
+    #x {
+        position: absolute;
+        top: 100vh;
+        left: -100vh;
+        display: inline-block;
+        
+    }
+    #z {
+        position: absolute;
+        top: 100vh;
+        left: -150vh;
+        display: inline-block;
+        
+    }
+}
